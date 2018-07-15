@@ -3,12 +3,12 @@ package com.youyd.imooc.concurrency.test.sync;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class SychronizedExample1 {
+public class SychronizedExample2 {
 	
 	//修饰代码块
-	public void test1(int j) {
+	public static void test1(int j) {
 		
-		synchronized (this) {
+		synchronized (SychronizedExample2.class) {
 			for(int i=0;i<10;i++) {
 				System.out.println("test1 "+j +"-"+ i);
 			}
@@ -17,15 +17,15 @@ public class SychronizedExample1 {
 	
 	//修饰一个方法
 	
-	public synchronized void test2(int j) {
+	public static synchronized void test2(int j) {
 		for(int i=0;i<10;i++) {
 			System.out.println("test2 "+j+"-" + i);
 		}
 	}
 	
 	public static void main(String[] args) {
-		SychronizedExample1 exmaple1=new SychronizedExample1();
-		SychronizedExample1 exmaple2=new SychronizedExample1();
+		SychronizedExample2 exmaple1=new SychronizedExample2();
+		SychronizedExample2 exmaple2=new SychronizedExample2();
 		ExecutorService executorService=Executors.newCachedThreadPool();
 		executorService.execute(()->{
 			exmaple1.test1(1);
