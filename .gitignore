@@ -1,0 +1,10 @@
+/target/
+*.prefs
+.settings/.jsdtscope
+*.component
+.settings/org.eclipse.wst.common.project.facet.core.xml
+*.container
+.settings/org.eclipse.wst.jsdt.ui.superType.name
+concurrency.iml
+.project
+.classpath
