@@ -16,10 +16,10 @@ class UnsafePublish {
 
     public static void main(String[] args) {
         UnsafePublish unsafePublish=new UnsafePublish();
-        log.info("{}", Arrays.toString(unsafePublish.getStates()));
+        System.out.println(Arrays.toString(unsafePublish.getStates()));
 
         unsafePublish.getStates()[0]="d";
-        log.info("{}", Arrays.toString(unsafePublish.getStates()));
+        System.out.println(Arrays.toString(unsafePublish.getStates()));
 
     }
 }
